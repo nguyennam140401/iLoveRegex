@@ -10,6 +10,9 @@
     --text-color: #000000;
     --background-color: #fff;
 }
+body {
+    font-family: roboto, sans-serif;
+}
 .App {
     text-align: center;
 }
@@ -62,6 +65,7 @@
 }
 .true {
     background-color: var(--second-color);
+    color: var(--text-color) !important;
 }
 .regexStr {
     display: flex;
@@ -86,9 +90,37 @@
 .result {
     background-color: var(--primary-color);
     padding: 1rem;
+    position: relative;
+    height: auto;
+}
+.result .match {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+.result textarea {
+    overflow: hidden;
+    overflow-wrap: break-word;
+    resize: none;
+    min-height: 267px;
+    height: auto;
+    outline: none;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    white-space: pre-wrap;
+    font-family: roboto;
 }
 .result span {
     display: block;
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
     line-height: 1.5rem;
+    color: transparent;
+    font-size: 1.2rem;
+    width: max-content;
+    word-spacing: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
